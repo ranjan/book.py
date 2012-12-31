@@ -1,5 +1,4 @@
 from demoapp.books.models import Book
-from django.http import HttpResponse
 from django.shortcuts import render_to_response
 
 def search(request):
@@ -16,4 +15,10 @@ def search(request):
         {'books': books, 'query': q})
   return render_to_response('search_form.html',
     {'errors': errors})
+
+
+
+
+
+  
 

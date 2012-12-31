@@ -8,6 +8,7 @@ from django.template import Template
 from django.contrib import admin
 admin.autodiscover()
 from demoapp.books import views
+from demoapp.contact import contact_views
 
 #urlpatterns = patterns('',
   # Example:
@@ -27,4 +28,6 @@ urlpatterns = patterns('',
   (r'^time/plus/(\d{1,2})/$', hours_ahead),
   (r'^admin/(.*)', admin.site.root),
   (r'^search/$', views.search),
+  (r'^contact/$', contact_views.contact),
+  (r'^contact/thanks/$', contact_views.thanks),
 )
